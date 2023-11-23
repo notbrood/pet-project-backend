@@ -1,12 +1,12 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
+app.use(cors());
 const app = express();
 const custModel = require("./models/Customers.js");
 const config = require("./config/config.js");
 const petModel = require("./models/pet.js");
 app.use(express.json());
-app.use(cors());
 mongoose.connect(
   config.DB
 ).then(
